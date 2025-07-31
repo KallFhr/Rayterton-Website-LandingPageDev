@@ -1,29 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rayterton International Solution</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/phosphor-icons"></script>
-    <link rel="stylesheet" href="index.css">
+    <title>Rayterton International Solution - Creative</title>
+    <link rel="stylesheet" href="style_creative.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-
-    <div class="overlay"></div> <header class="hero-section">
-    <div class="hero-slider">
-        <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');"></div>
-        <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1678712507016-0491d697513a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');"></div>
-        <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1663209088362-4b04358fe012?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');"></div>
-    </div>
-
-    <nav class="navbar">
-    <div class="container">
-        <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation"> <i class="ph-list"></i>
-        </button>
-        <a href="#" class="nav-logo">
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="#" class="nav-logo">
   <span class="logo-main">
     Rayterton <span style="color: red;">Apps</span>
   </span>
@@ -31,267 +20,291 @@
     Enterprise Software Solution
   </span>
 </a>
-         <!-- <a href="https://www.rayterton.com" style="text-decoration: none; color: inherit;">
-        <div>
-          <span class="nav-logo" style="margin: 0;">
-            <b>
-              Rayterton <span class="apps" style="color: red;">Apps</span> 
-            
-            </b>
-          </span>
-          <p style="margin: 0; font-size: 10px; color: #3B82F6;"  class="highlight">Enterprise Software Solution</p>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#business-units">Business Units</a></li>
+                    <li><a href="#strengths">Strengths</a></li>
+                    <li><a href="#software">Software</a></li>
+                    <li><a href="#industries">Industries</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><div class= "dropdown">
+                                <span>Language</span>
+                                <div class=" dropdown-content">
+                                    <p>Indonesia</p>
+                                    <p>English</p>
+                                </div>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
         </div>
-      </a> -->
-        <ul class="nav-menu">
-            <li><a href="#about" data-lang-key="nav_about">About Us</a></li>
-            <li><a href="#strengths" data-lang-key="nav_strengths">Strengths</a></li>
-            <li><a href="#software" data-lang-key="nav_software">Software</a></li>
-            <li><a href="#industries" data-lang-key="nav_industries">Industries</a></li>
-            <li><a href="#contact" data-lang-key="nav_contact">Contact</a></li>
-        </ul>
-        <div class="nav-controls">
-            <button id="theme-toggle" class="theme-btn">
-                <i class="ph-sun"></i>
-                <i class="ph-moon"></i>
-            </button>
-            <select id="lang-switcher" class="lang-select">
-                <option value="en">English</option>
-                <option value="id">Indonesian</option>
-                <option value="ms">Malaysia</option>
-                <option value="th">Thailand</option>
-                <option value="hi">Hindi</option>
-                <option value="ko">Korean</option>
-                <option value="ja">Japanese</option>
-                <option value="vi">Vietnamese</option>
-            </select>
-        </div>
-    </div>
-</nav>
-    <div class="hero-content">
-        <h1 data-lang-key="hero_title">Rayterton International Solution</h1>
-        <p data-lang-key="hero_subtitle">Technology Solution (Server, Hardware, Internet of Things, etc..)</p>
-    </div>
-</header>
+    </header>
 
-    <main>
-        <section id="about" class="about-section">
-            <div class="container">
-                <div class="section-title">
-                    <h2 data-lang-key="about_title">About Us</h2>
-                    <p data-lang-key="about_text">Established in 2003, Rayterton provides IT software, server, hardware products and technology solution to many enterprise. Rayterton is a software principle for Rayterton Apps Software and Rayterton Cloud. Rayterton also provides technology, hardware, server and infrastructure supporting these software. Rayterton also provides IT and Management Consulting as well.</p>
+    <section id="hero" class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Unlock Your Potential with <br>Rayterton International Solution</h1>
+                <p>Leading the way in IT innovation and digital transformation since 2011.</p>
+                <a href="#about" class="btn btn-primary">Discover More <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="hero-image">
+                <!-- <img src="https://via.placeholder.com/600x400?text=Creative+IT+Solution" alt="IT Solutions Illustration"> -->
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <h2 class="section-title">About <span class="highlight">Us</span></h2>
+                <p>Established in 2011, Rayterton provides IT software, server, hardware products and technology solution to various industries and companies. Our IT solution focuses on Business Process Improvement (BPI), IT Infrastructure, and IT Management. Rayterton is committed to supporting our clients’ business operations by providing IT and Management Services as well.</p>
+            </div>
+            <div class="about-visual">
+                <div class="card-metric">
+                    <h3>10+</h3>
+                    <p>Years of Experience</p>
+                </div>
+                <!-- <div class="card-metric">
+                    <h3>500+</h3>
+                    <p>Satisfied Clients</p>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+    <section id="business-units" class="business-units-section">
+        <div class="container">
+            <h2 class="section-title">Our Business <span class="highlight">Units</span></h2>
+            <div class="business-grid">
+                <div class="business-card">
+                    <img src="https://rayterton.maxapex.net/apex/r/a171879b/1028/files/static/v136/Software.jpg" alt="Software Development">
+                    <h4>Rayterton Apps Software (On Premise and Cloud Solution)</h4>
+                    <p>Crafting custom Apps tailored to your needs.</p>
+                </div>
+                <div class="business-card">
+                    <img src="https://rayterton.maxapex.net/apex/r/a171879b/1028/files/static/v136/Technology%20kotak.jpg" alt="Infrastructure Services">
+                    <h4>Technology Solution (Server, Hardware, Internet of Things, etc..)</h4>
+                    <p>Technology Solution involves providing and implementing diverse technologies like servers, hardware, and the Internet of Things (IoT) to meet specific business needs.</p>
+                </div>
+                <div class="business-card">
+                    <img src="https://rayterton.maxapex.net/apex/r/a171879b/1028/files/static/v136/it%20consult.jpg" alt="Cloud Solutions">
+                    <h4>IT Consulting</h4>
+                    <p>IT consulting is a professional service that helps organizations improve performance and efficiency through the implementation and management of information technology.</p>
+                </div>
+                <div class="business-card">
+                    <img src="https://rayterton.maxapex.net/apex/r/a171879b/1028/files/static/v136/management%20consult.jpg" alt="Cybersecurity">
+                    <h4>Management Consulting</h4>
+                    <p>Management consulting helps organizations improve performance and efficiency by analyzing problems and developing improvement plans.</p>
+                </div>
+                 <div class="business-card">
+                    <img src="https://rayterton.com/img/rtn%20cloud/RTN%20Cloud/academy.jfif" alt="Managed Services">
+                    <h4>Rayterton Academy</h4>
+                    <p>virtual learning environment or digital classroom providing courses, materials, and tools for online study and assignment completion.</p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="business-units">
-            <div class="container">
-                <div class="section-title">
-                    <h2 data-lang-key="bu_title">Our Business Units</h2>
+    <section id="strengths" class="strengths-section">
+        <div class="container">
+            <h2 class="section-title">Our Competitive <span class="highlight">Strengths</span></h2>
+            <div class="strengths-grid">
+                <div class="strength-item">
+                    <div class="icon-box"><i class="fas fa-gem"></i></div>
+                    <h3>100% risk free</h3>
+                    <!-- <p>Tim ahli dengan dedikasi penuh dan standar kerja global.</p> -->
                 </div>
-                <div class="business-units-grid">
-                    <div class="unit-card">
-                        <img src="https://images.unsplash.com/photo-1556740758-90de374c12ad?q=80&w=2070&auto=format&fit=crop" alt="Software Development">
-                        <div class="unit-caption">
-                            <h3 data-lang-key="bu_card1_caption">Rayterton Apps Software (on-Premise and Cloud Solution)</h3>
-                            <p>Crafting custom Apps tailored to your needs.</p>
-                        </div>
-                    </div>
-                    <div class="unit-card">
-                        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070&auto=format&fit=crop" alt="Technology Solution">
-                        <div class="unit-caption">
-                            <h3 data-lang-key="bu_card2_caption">Technology Solution (Server, Hardware, Internet of Things, etc..)</h3>
-                            <p>Technology Solution involves providing and implementing diverse technologies like servers, hardware, and the Internet of Things (IoT) to meet specific business needs.</p>
-                        </div>
-                    </div>
-                    <div class="unit-card">
-                        <img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?q=80&w=2070&auto=format&fit=crop" alt="IT Consulting">
-                        <div class="unit-caption">
-                            <h3 data-lang-key="bu_card3_caption">IT Consulting</h3>
-                            <p>IT consulting is a professional service that helps organizations improve performance and efficiency through the implementation and management of information technology.</p>
-                        </div>
-                    </div>
-                    <div class="unit-card">
-                        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop" alt="Management Consulting">
-                        <div class="unit-caption">
-                            <h3 data-lang-key="bu_card4_caption">Management Consulting</h3>
-                       <p>Management consulting helps organizations improve performance and efficiency by analyzing problems and developing improvement plans.</p>
-                        </div>
-                    </div>
-                    <div class="unit-card">
-                        <img src="assets-img/rayterton-academy.jpg" alt="Rayterton Academy">
-                        <div class="unit-caption">
-                            <h3 data-lang-key="bu_card5_caption">Rayterton Academy</h3>
-                            <p>Rayterton Academy offers training and certification programs to help individuals and organizations enhance their skills in IT and management.</p>
-                        </div>
+                <div class="strength-item">
+                    <div class="icon-box"><i class="fas fa-lightbulb"></i></div>
+                    <h3>Easy to customize</h3>
+                    <!-- <p>Mendorong batas teknologi untuk solusi masa depan.</p> -->
+                </div>
+                <div class="strength-item">
+                    <div class="icon-box"><i class="fas fa-handshake"></i></div>
+                    <h3>Software ownership</h3>
+                    <!-- <p>Fokus pada kesuksesan jangka panjang klien kami.</p> -->
+                </div>
+                <div class="strength-item">
+                    <div class="icon-box"><i class="fas fa-shield-alt"></i></div>
+                    <h3>Best fit to client requirements</h3>
+                    <!-- <p>Komitmen pada hasil terbaik dan keandalan produk.</p> -->
+                </div>
+                <div class="strength-item">
+                    <div class="icon-box"><i class="fas fa-headset"></i></div>
+                    <h3>No change requirements (CR) Fee during maintenance</h3>
+                    <!-- <p>Bantuan ahli kapan pun Anda membutuhkannya.</p> -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="software" class="software-section">
+        <div class="container">
+            <h2 class="section-title">Our Best Selling <span class="highlight">Software</span></h2>
+            <p class="section-subtitle">(From 20 Software Group and 70 Software Modules)</p>
+            <div class="software-grid">
+    <div class="software-tile">
+        <i class="fas fa-sitemap"></i> <p>ERP Solutions</p>
+    </div>
+    <div class="software-tile">
+        <i class="fas fa-handshake"></i> <p>CRM Systems</p>
+    </div>
+    <div class="software-tile">
+        <i class="fas fa-industry"></i> <p>Manufacturing Resource Planning (MRP)</p>
+    </div>
+    <div class="software-tile">
+        <i class="fas fa-project-diagram"></i> <p>Project Management</p>
+    </div>
+    <div class="software-tile">
+        <i class="fas fa-calculator"></i> <p>Finance and Accounting</p>
+    </div>
+    <div class="software-tile">
+        <i class="fas fa-users-cog"></i> <p>Human Capital Management / Employee Self Service</p>
+    </div>
+    <div class="software-tile">
+        <i class="fas fa-umbrella"></i> <p>Insurance Broker System</p>
+    </div>
+    <div class="software-tile">
+        <i class="fas fa-file-contract"></i> <p>Insurance Management System</p>
+    </div>
+    <div class="software-tile">
+        <i class="fas fa-university"></i> <p>Banking / Multifinance Reporting System</p>
+    </div>
+    <div class="software-tile">
+        <i class="fas fa-hotel"></i> <p>Hotel Management System</p>
+    </div>
+    <div class="software-tile">
+        <i class="fas fa-cash-register"></i> <p>B2B / B2C / Point of Sales (POS)</p>
+    </div>
+    <div class="software-tile">
+        <i class="fas fa-plane-departure"></i> <p>Tour and Travel / Reservation System</p>
+    </div>
+    <div class="software-tile">
+        <i class="fas fa-people-arrows"></i> <p>Business Matching</p>
+    </div>
+    <div class="software-tile">
+        <i class="fas fa-user-tie"></i> <p>Employee Career Planning Portal</p>
+    </div>
+    <div class="software-tile">
+        <i class="fas fa-chalkboard-teacher"></i> <p>e Learning Management System (LMS)</p>
+    </div>
+    <div class="software-tile">
+        <i class="fas fa-chart-line"></i> <p>KPI Dashboard / Business Intelligence / Big Data</p>
 </div>
-                </div>
-            </div>
-        </section>
-
-       <!-- <section id="strengths" class="strengths-section">
-            <div class="container">
-                <div class="section-title">
-                    <h2 data-lang-key="strengths_title">Our Competitive Strengths</h2>
-                </div>
-                <div class="strengths-grid">
-                    <div class="strength-card">
-                        <i class="ph-check-circle"></i>
-                        <h3 data-lang-key="strength1">100% risk free</h3>
-                    </div>
-                    <div class="strength-card">
-                        <i class="ph-pencil-simple"></i>
-                        <h3 data-lang-key="strength2">Easy to customize</h3>
-                    </div>
-                    <div class="strength-card">
-                        <i class="ph-chart-bar"></i>
-                        <h3 data-lang-key="strength3">Software Ownership</h3>
-                    </div>
-                    <div class="strength-card">
-                        <i class="ph-user"></i>
-                        <h3 data-lang-key="strength4">Best Fit to Client Requirements</h3>
-                    </div>
-                    <div class="strength-card">
-                        <i class="ph-calendar"></i>
-                        <h3 data-lang-key="strength5">No Change Request (CR) Fee during Maintenance</h3>
-                    </div>
-                </div>
-            </div>
-        </section> -->
-
-        <section id="strengths" class="strengths-section">
-    <div class="container">
-        <div class="section-title">
-            <h2 data-lang-key="strengths_title">Our Competitive Strengths</h2>
         </div>
-        <div class="strengths-grid">
-            <div class="strength-card">
-                <i class="ph-check-circle"></i>
-                <h3 data-lang-key="strength1">100% risk free</h3>
-            </div>
-            <div class="strength-card">
-                <i class="ph-pencil-simple"></i>
-                <h3 data-lang-key="strength2">Easy to customize</h3>
-            </div>
-            <div class="strength-card">
-                <i class="ph-chart-bar"></i>
-                <h3 data-lang-key="strength3">Software Ownership</h3>
-            </div>
-            <div class="strength-card">
-                <i class="ph-user"></i>
-                <h3 data-lang-key="strength4">Best Fit to Client Requirements</h3>
-            </div>
-            <div class="strength-card">
-                <i class="ph-calendar"></i>
-                <h3 data-lang-key="strength5">No Change Request (CR) Fee during Maintenance</h3>
-            </div>
-        </div>
+    </section>
+
+    <section id="industries" class="industries-section">
+        <div class="container">
+            <h2 class="section-title">Industries We <span class="highlight">Serve</span></h2>
+            <p class="section-subtitle">(Cross Business Sector)</p>
+            <div class="industries-grid">
+    <div class="industry-item">
+        <i class="fas fa-cogs"></i> <p>Manufacturing</p>
     </div>
-</section>
-
-        <section id="software" class="services-section">
-            <div class="container">
-                <div class="section-title">
-                    <h2 data-lang-key="software_title">Select the Software You Are Interested In</h2>
-                    <p data-lang-key="software_subtitle">(From 20 Software Group and 70 Software Modules)</p>
-                </div>
-                <div class="services-grid">
-                     <div class="service-card"><i class="ph-rocket-launch"></i><h3>Enterprise Resource Planning (ERP)</h3></div>
-                     <div class="service-card"><i class="ph-users-three"></i><h3>Customer Relationship Management (CRM)</h3></div>
-                     <div class="service-card"><i class="ph-truck"></i><h3>Manufacturing Resource Planning (MRP)</h3></div>
-                     <div class="service-card"><i class="ph-projector-screen-chart"></i><h3>Project Management</h3></div>
-                     <div class="service-card"><i class="ph-chart-bar"></i><h3>Finance and Accounting</h3></div>
-                     <div class="service-card"><i class="ph-user-list"></i><h3>Human Capital Management / Employee Self Service</h3></div>
-                     <div class="service-card"><i class="ph-lifebuoy"></i><h3>Insurance Broker System</h3></div>
-                     <div class="service-card"><i class="ph-shield-check"></i><h3>Insurance Management System</h3></div>
-                     <div class="service-card"><i class="ph-bank"></i><h3>Banking / Multifinance Reporting System</h3></div>
-                     <div class="service-card"><i class="ph-buildings"></i><h3>Hotel Management System</h3></div>
-                     <div class="service-card"><i class="ph-storefront"></i><h3>B2B / B2C / Point of Sales (POS)</h3></div>
-                     <div class="service-card"><i class="ph-airplane-takeoff"></i><h3>Tour and Travel / Reservation System</h3></div>
-                     <div class="service-card"><i class="ph-handshake"></i><h3>Business Matching</h3></div>
-                     <div class="service-card"><i class="ph-path"></i><h3>Employee Career Planning Portal</h3></div>
-                     <div class="service-card"><i class="ph-chalkboard-teacher"></i><h3>e-Learning Management System (LMS)</h3></div>
-                     <div class="service-card"><i class="ph-chart-pie-slice"></i><h3>KPI Dashboard / Business Intelligence / Big Data</h3></div>
-                </div>
+    <div class="industry-item">
+        <i class="fas fa-store"></i> <p>Retail</p>
+    </div>
+    <div class="industry-item">
+        <i class="fas fa-truck-ramp-box"></i> <p>Distribution</p>
+    </div>
+    <div class="industry-item">
+        <i class="fas fa-landmark"></i> <p>Banking / Multifinance</p>
+    </div>
+    <div class="industry-item">
+        <i class="fas fa-check"></i> <p>Insurance</p>
+    </div>
+    <div class="industry-item">
+        <i class="fas fa-hard-hat"></i> <p>General Contractor</p>
+    </div>
+    <div class="industry-item">
+        <i class="fas fa-oil-can"></i> <p>Oil and Gas</p>
+    </div>
+    <div class="industry-item">
+        <i class="fas fa-shipping-fast"></i> <p>Transportation / Freight Forwarding</p>
+    </div>
+    <div class="industry-item">
+        <i class="fas fa-route"></i> <p>Tour and Travel</p>
+    </div>
+    <div class="industry-item">
+        <i class="fas fa-hotel"></i> <p>Hotel</p>
+    </div>
+    <div class="industry-item">
+        <i class="fas fa-utensils"></i> <p>Restaurant / Cafe</p>
+    </div>
+    <div class="industry-item">
+        <i class="fas fa-building"></i> <p>Property Management</p>
+    </div>
+    <div class="industry-item">
+        <i class="fas fa-calendar-alt"></i> <p>Event Organizer</p>
+    </div>
+    <div class="industry-item">
+        <i class="fas fa-building"></i> <p>Professional Exhibition Organizer (PEO)</p>
+    </div>
+    <div class="industry-item">
+        <i class="fas fa-people-carry-box"></i> <p>Professional Congress Organizer (PCO)</p>
+    </div>
+    <div class="industry-item">
+        <i class="fas fa-hammer"></i> <p>Event Contractor</p>
+    </div>
+    <div class="industry-item">
+        <i class="fas fa-map-marker-alt"></i> <p>Venue</p>
+    </div>
+    <div class="industry-item">
+        <i class="fas fa-box"></i> <p>Vendor (Florist, Audio Visual, Media, etc)</p>
+    </div>
+    <div class="industry-item">
+        <i class="fas fa-landmark"></i> <p>Government</p>
+    </div>
+    <div class="industry-item">
+        <i class="fas fa-university "></i> <p>Kementrian / BUMN</p>
+    </div>
+</div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="industries" class="industries-section">
-            <div class="container">
-                <div class="section-title">
-                    <h2 data-lang-key="industries_title">Industries We Serve</h2>
-                    <p data-lang-key="industries_subtitle">(Cross Business Sector)</p>
-                </div>
-                <div class="industries-grid">
-                    <div class="industry-card"><i class="ph-factory"></i><h3>Manufacturing</h3></div>
-                    <div class="industry-card"><i class="ph-storefront"></i><h3>Retail</h3></div>
-                    <div class="industry-card"><i class="ph-truck"></i><h3>Distribution</h3></div>
-                    <div class="industry-card"><i class="ph-bank"></i><h3>Banking/Multifinance</h3></div>
-                    <div class="industry-card"><i class="ph-shield-check"></i><h3>Insurance</h3></div>
-                    <div class="industry-card"><i class="ph-wrench"></i><h3>General Contractor</h3></div>
-                    <div class="industry-card"><i class="ph-gas-pump"></i><h3>Oil and Gas</h3></div>
-                    <div class="industry-card"><i class="ph-airplane-takeoff"></i><h3>Transportation/Freight Forwarding</h3></div>
-                    <div class="industry-card"><i class="ph-map-trifold"></i><h3>Tour and Travel</h3></div>
-                    <div class="industry-card"><i class="ph-buildings"></i><h3>Hotel</h3></div>
-                    <div class="industry-card"><i class="ph-coffee"></i><h3>Restaurant/Cafe</h3></div>
-                    <div class="industry-card"><i class="ph-house"></i><h3>Property Management</h3></div>
-                    <div class="industry-card"><i class="ph-calendar-check"></i><h3>Event Organizer</h3></div>
-                    <div class="industry-card"><i class="ph-presentation-chart"></i><h3>Professional Exhibition Organizer (PEO)</h3></div>
-                    <div class="industry-card"><i class="ph-microphone"></i><h3>Professional Congress Organizer (PCO)</h3></div>
-                    <div class="industry-card"><i class="ph-wrench"></i><h3>Event Contractor</h3></div>
-                    <div class="industry-card"><i class="ph-map-pin"></i><h3>Venue</h3></div>
-                    <div class="industry-card"><i class="ph-users-four"></i><h3>Vendors (Florist, Audio Visual, Media, etc)</h3></div>
-                    <div class="industry-card"><i class="ph-scales"></i><h3>Government</h3></div>
-                    <div class="industry-card"><i class="ph-flag"></i><h3>Kementerian / BUMN</h3></div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer id="contact" class="footer-section">
+    <footer id="contact" class="footer">
         <div class="container">
             <div class="footer-grid">
-                <div class="footer-col">
-                    <h3 data-lang-key="footer_col1_title">Rayterton International</h3>
-                    <p data-lang-key="footer_col1_text">Your trusted partner in technology and innovation since 2003.</p>
-                    
+                <div class="footer-col footer-about">
+                    <h3>Rayterton Profile</h3>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#strengths">Our Competitive Strengths</a></li>
+                        <li><a href="#software">Our Best Selling Software</a></li>
+                        <li><a href="#industries">Industries We Serve</a></li>
+                    </ul>
                 </div>
-                <div class="footer-col">
-   <h4 data-lang-key="footer_col3_title">Contact Us :</h4>
-   <div class="contact-links">
-    <a href="mailto:info@rayterton.com" target="_blank">
-           <i class="ph-envelope"></i> info@rayterton.com
-       </a>
-       <a href="mailto:sales@rayterton.com" target="_blank">
-           <i class="ph-envelope"></i> sales@rayterton.com
-       </a>
-       <a href="https://wa.me/6281296150369" target="_blank">
-           <i class="ph-whatsapp-logo"></i> WhatsApp Indonesia
-       </a>
-       <a href="https://wa.me/6591754449" target="_blank">
-           <i class="ph-whatsapp-logo"></i> WhatsApp Singapore
-       </a>
-   </div>
-</div>
-                <div class="footer-col">
-   <h4 data-lang-key="footer_col4_title">Follow Us</h4>
-   <div class="social-icons">
-       <a href="https://web.facebook.com/Rayterton/" target="_blank"><i class="ph-facebook-logo"></i></a>
-       <a href="https://www.linkedin.com/company/rayterton/" target="_blank"><i class="ph-linkedin-logo"></i></a>
-       <a href="https://www.tiktok.com/@rayterton.academy" target="_blank"><i class="ph-tiktok-logo"></i></a>
-       <a href="https://www.youtube.com/channel/UCSeKfTIHAp954bjyuRD6fWw" target="_blank"><i class="ph-youtube-logo"></i></a>
-       <a href="https://www.instagram.com/rayterton/" target="_blank"><i class="ph-instagram-logo" target="_blank"></i></a>
-       <p data-lang-key="contact_address_line1">Menteng Square Tower A Lantai 3 unit AO-09</p>
-                    <p data-lang-key="contact_address_line2">Jl. Matraman Raya 30E, Jakarta Pusat</p>
-       
-   </div>
-</div>
+                <div class="footer-col footer-links">
+                    <h3>About Rayterton</h3>
+                    <ul>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col footer-contact">
+                    <h3>Get In Touch</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Your Address Here, City, Country</p>
+                    <p><i class="fas fa-phone"></i> +62 123 4567 890</p>
+                    <p><i class="fas fa-envelope"></i> info@rayterton.com</p>
+                </div>
+                <div class="footer-col footer-social">
+                    <h3>Follow Us</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
             </div>
             <div class="footer-bottom">
-                <p data-lang-key="footer_copyright">© 2025 Rayterton International Solution. All Rights Reserved.</p>
+                <p>&copy; 2025 Rayterton International Solution. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
