@@ -458,14 +458,21 @@ body.light-theme .unit-card {
     padding: 20px;
     text-align: center;
     flex-grow: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    /* Menghapus properti flex agar konten mengalir dari atas ke bawah */
 }
 .unit-caption h3 {
     font-size: 1rem;
     font-weight: 500;
     line-height: 1.4;
+    /* Menambahkan jarak bawah agar tidak terlalu mepet dengan deskripsi */
+    margin-bottom: 15px; 
+}
+
+/* Tambahkan style ini untuk paragraf deskripsi */
+.unit-caption p {
+    font-size: 0.9rem;
+    color: var(--text-color);
+    line-height: 1.6;
 }
 .unit-card-academy {
     background-color: var(--primary-color);
