@@ -145,7 +145,7 @@ body.light-theme .navbar {
 
 .navbar .container {
     max-width: 100%;
-    padding: 0 40px;
+    padding: 0 60px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -156,14 +156,14 @@ body.light-theme .navbar {
 .nav-logo {
   font-family: 'Poppins';
   text-decoration: none;
-  text-align: right; 
-  line-height: 1.25;
+  text-align: left; 
+  line-height: 1.27;
   display: inline-block; 
 }
 
 /* Style untuk baris pertama: "Rayterton Apps" */
 .logo-main {
-  font-size: 25px;
+  font-size: 20px;
   font-weight: 900;
   color: var(--light-color); 
 }
