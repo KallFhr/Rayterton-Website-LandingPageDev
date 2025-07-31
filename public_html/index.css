@@ -1,0 +1,893 @@
+/* ==========================================================================
+   1. GLOBAL STYLES & VARIABLES
+   ========================================================================== */
+:root {
+    /* DARK THEME (DEFAULT) */
+    --primary-color: #3B82F6;
+    --secondary-color: #00BFFF;
+    --dark-color: #121224;
+    --surface-color: #16162e;
+    --light-color: #FFFFFF;
+    --text-color: #D0D0E0;
+    --heading-dark-color: #333333;
+    --font-family: 'Poppins', sans-serif;
+    --border-radius: 12px;
+    --box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+/* LIGHT THEME VARIABLES */
+body.light-theme {
+    --dark-color: #F4F6F8;
+    --surface-color: #FFFFFF;
+    --light-color: #121224;
+    --text-color: #555555;
+    --primary-color: #0D47A1;
+    --secondary-color: #007BFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--dark-color);
+    color: var(--text-color);
+    line-height: 1.7;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ==========================================================================
+   2. LAYOUT & REUSABLE COMPONENTS
+   ========================================================================== */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+section {
+    padding: 80px 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-title h2 {
+    font-size: 2.5rem;
+    color: var(--light-color);
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.section-title p {
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+    color: var(--secondary-color);
+}
+
+/* ==========================================================================
+   3. HEADER & NAVIGATION
+   ========================================================================== */
+   .hero-slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;  
+}
+
+.hero-slider .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0; /* Hidden by default */
+    transition: opacity 1.5s ease-in-out; /* Smooth fade transition */
+    z-index: 1;
+}
+
+.hero-slider .slide.active {
+    opacity: 1; /* Visible when active */
+    z-index: 2; /* Bring active slide to front */
+}
+
+.hero-section {
+    padding-top: 70px;
+    height: 100vh;
+    background: linear-gradient(rgba(18, 18, 36, 0.85), rgba(18, 18, 36, 0.95)), url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop') no-repeat center center/cover;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    z-index: 0;
+}
+
+body.light-theme .hero-section {
+    background: linear-gradient(rgba(255, 255, 255, 0.411), rgba(255, 255, 255, 0.411)), url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop') no-repeat center center/cover;
+    color: var(--dark-color);
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+    background-color: var(--dark-color);
+    transition: var(--transition);
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+body.light-theme .navbar {
+    background-color: var(--surface-color);
+    box-shadow: var(--box-shadow);
+}
+
+.navbar .container {
+    max-width: 100%;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative; 
+}
+
+/* Container utama untuk logo */
+.nav-logo {
+  font-family: 'Poppins';
+  text-decoration: none;
+  text-align: right; 
+  line-height: 1.25;
+  display: inline-block; 
+}
+
+/* Style untuk baris pertama: "Rayterton Apps" */
+.logo-main {
+  font-size: 25px;
+  font-weight: 900;
+  color: var(--light-color); 
+}
+
+/* Style untuk baris kedua: "Solution" */
+.logo-sub {
+  display: block; 
+  font-size: 10px;
+  font-weight: 900;
+}
+
+/* Style untuk memberi warna pada "Solution" */
+.nav-logo .highlight {
+  color: #3B82F6; 
+}
+/* Sembunyikan menu navigasi secara default */
+.nav-menu {
+    list-style: none;
+    display: none; 
+    flex-direction: column; 
+    width: 100%;
+    text-align: center;
+    margin-left: 0;
+    position: absolute; 
+    top: 100%; 
+    left: 0;
+    background-color: var(--dark-color); 
+    padding: 20px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    z-index: 999; 
+    order: 4; 
+}
+
+body.light-theme .nav-menu {
+    background-color: var(--surface-color);
+}
+
+.nav-menu.active {
+    display: flex; 
+}
+
+.nav-menu li {
+    margin: 10px 0; 
+}
+
+.nav-menu a {
+    color: var(--light-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
+}
+
+.nav-controls {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    order: 3; 
+}
+
+.theme-btn {
+    background: none;
+    border: none;
+    color: var(--light-color);
+    cursor: pointer;
+    font-size: 1.5rem;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.theme-btn .ph-sun { display: none; }
+.theme-btn .ph-moon { display: block; }
+
+body.light-theme .theme-btn .ph-sun { display: block; }
+body.light-theme .theme-btn .ph-moon { display: none; }
+
+.lang-select {
+    background-color: var(--surface-color);
+    color: var(--text-color);
+    border: 1px solid var(--secondary-color);
+    border-radius: 5px;
+    padding: 5px;
+    font-family: var(--font-family);
+    cursor: pointer;
+}
+
+.nav-toggle {
+    display: block; 
+    background: none;
+    border: none;
+    color: var(--light-color);
+    font-size: 1.8rem;
+    cursor: pointer;
+    margin-left: 0; 
+    order: 1; 
+}
+
+.nav-toggle + .nav-logo {
+    margin-left: 20px; 
+}
+
+@media (min-width: 769px) { 
+    .nav-toggle {
+        display: none;
+    }
+    .nav-menu {
+        display: flex; 
+        flex-direction: row; 
+        position: static; 
+        width: auto;
+        box-shadow: none;
+        background-color: transparent;
+        padding: 0;
+        order: initial; 
+    }
+    .nav-menu li {
+        margin-left: 30px;
+        margin-bottom: 0;
+    }
+    .nav-logo {
+        order: initial; 
+    }
+    .nav-controls {
+        order: initial; 
+    }
+     .nav-toggle + .nav-logo {
+        margin-left: 0; 
+    }
+}
+
+
+.hero-content{
+    position: relative; 
+    z-index: 10;
+    
+}
+
+.hero-content h1 {
+    font-size: 45px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    max-width: 800px;
+    color: #FFFFFF; 
+    text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000; 
+}
+
+.hero-content p {
+    font-size: 15px;
+    margin-bottom: 40px;
+    max-width: 800px;
+    color: #FFFFFF; 
+    text-shadow:
+        -0.5px -0.5px 0 #000,
+        0.5px -0.5px 0 #000,
+        -0.5px 0.5px 0 #000,
+        0.5px 0.5px 0 #000; 
+}
+
+/* ==========================================================================
+   5. SPECIFIC SECTIONS
+   ========================================================================== */
+.about-section, #strengths, #business-units, #software, #industries {
+    background-color: var(--surface-color);
+    
+}
+
+ .industries-section {
+    background-color: var(--dark-color);
+}
+
+.about-section {
+    border-bottom: 2px solid #000000;
+}
+
+.software{
+    border-bottom: 2px solid #000000;
+}
+body.light-theme .about-section {
+    border-bottom: 2px solid #EAEAEA;
+}
+#about .section-title p {
+    color: var(--text-color);
+    text-align: justify;
+    font-size: 20px;
+    max-width: 100%;
+}
+
+.strengths-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.strength-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: var(--transition);
+}
+
+.strength-card i {
+    font-size: 2.5rem;
+    background-color: var(--primary-color);
+    color: #FFFFFF;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+.strength-card h3 {
+    font-size: 1.1rem;
+    color: var(--light-color);
+    font-weight: 500;
+    text-align: center;
+}
+
+.services-grid, .industries-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.service-card, .industry-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: var(--surface-color);
+    border-radius: var(--border-radius);
+    border: 1px solid rgba(0, 191, 255, 0.2);
+    transition: var(--transition);
+    cursor: pointer;
+}
+body.light-theme .service-card,
+body.light-theme .industry-card {
+    border: 1px solid #EAEAEA;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.service-card i, .industry-card i {
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+}
+.service-card h3, .industry-card h3 {
+    font-size: 1rem;
+    color: var(--light-color);
+    font-weight: 500;
+}
+
+.business-units-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+}
+.unit-card {
+    background-color: var(--surface-color);
+    color: var(--text-color);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(0, 191, 255, 0.2);
+}
+body.light-theme .unit-card {
+    background-color: #FFFFFF;
+    color: var(--heading-dark-color);
+    border: 1px solid #EAEAEA;
+}
+
+.unit-card img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+}
+.unit-caption {
+    padding: 20px;
+    text-align: center;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.unit-caption h3 {
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+.unit-card-academy {
+    background-color: var(--primary-color);
+    color: #FFFFFF;
+    border: none;
+}
+.unit-card-academy h3 {
+    font-weight: 600;
+}
+body.light-theme .unit-card-academy {
+    background-color: var(--secondary-color);
+    color: #FFFFFF;
+}
+
+/* 6. FOOTER */
+.footer-section {
+    background-color: #0E0E1A;
+    padding: 60px 0 20px;
+    color: var(--text-color);
+}
+body.light-theme .footer-section {
+    background-color: #e9ecef;
+    color: #555; 
+}
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+.footer-col h3, .footer-col h4 {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+body.light-theme .footer-col h3,
+body.light-theme .footer-col h4 {
+    color: #121224;
+}
+.footer-col ul { list-style: none; }
+.footer-col ul li { margin-bottom: 10px; }
+.footer-col a {
+    color: var(--text-color); 
+    text-decoration: none;
+    transition: var(--transition);
+}
+body.light-theme .footer-col a {
+    color: #555; 
+}
+
+/* Gaya baru untuk bagian Contact Us (WhatsApp Links) */
+.footer-col .contact-links a {
+    display: flex;
+    align-items: center;
+    color: #FFFFFF; 
+    text-decoration: none;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+    white-space: nowrap;
+}
+
+.footer-col .contact-links a i {
+    font-size: 1.2rem;
+    margin-right: 10px;
+    color: #FFFFFF; 
+}
+
+/* KOREKSI: Rubah warna link di tema terang agar kontras dengan background terang footer */
+body.light-theme .footer-col .contact-links a {
+    color: #555; 
+}
+
+body.light-theme .footer-col .contact-links a i {
+    color: #555; 
+}
+
+
+/* Gaya untuk bagian Contact Us (Email Links) - pastikan juga ini benar */
+.footer-col .contact-email-links a {
+    display: flex;
+    align-items: center;
+    color: #FFFFFF; 
+    text-decoration: none;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+    white-space: nowrap;
+}
+
+.footer-col .contact-email-links a i {
+    font-size: 1.2rem;
+    margin-right: 10px;
+    color: #FFFFFF; 
+}
+
+/* KOREKSI: Rubah warna link email di tema terang agar kontras dengan background terang footer */
+body.light-theme .footer-col .contact-email-links a {
+    color: #555; 
+}
+
+body.light-theme .footer-col .contact-email-links a i {
+    color: #555; 
+}
+
+
+.social-icons a {
+    font-size: 1.8rem;
+    margin-right: 15px;
+}
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+body.light-theme .footer-bottom {
+    border-top: 1px solid #D5D5D5;
+}
+
+.social-icons p {
+    margin-top: 20px;
+    margin-bottom: 5px;
+    line-height: 1.5;
+    font-size: 0.95rem;
+    color: var(--text-color); 
+}
+
+/* ==========================================================================
+   7. MEDIA QUERIES
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+    .navbar .container {
+        padding: 0 20px;
+    }
+
+    .section {
+        padding: 60px 0;
+    }
+
+    .section-title h2 {
+        font-size: 2rem;
+    }
+
+    .section-title p {
+        font-size: 1rem;
+    }
+
+    .strengths-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px 20px;
+    }
+
+    .services-grid,
+    .industries-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+
+    .business-units-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .hero-content h1 {
+        font-size: 38px;
+    }
+
+    .hero-content p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar .container {
+        flex-wrap: nowrap; 
+        justify-content: flex-start; 
+        gap: 0; 
+    }
+
+    .nav-logo {
+        width: auto;
+        text-align: left;
+        margin-bottom: 0;
+        margin-left: 20px; 
+        order: 2; 
+    }
+    
+    .nav-controls {
+        display: flex; 
+        align-items: center;
+        width: auto;
+        justify-content: flex-end;
+        margin-left: auto; 
+        order: 3; 
+    }
+
+    .nav-menu {
+        display: none; 
+        flex-direction: column;
+        width: 100%;
+        text-align: left; 
+        margin-left: 0;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: rgba(50, 50, 50, 0.9); 
+        padding: 20px 0;
+        box-shadow: none; 
+        z-index: 999;
+        order: 4; 
+    }
+
+    body.light-theme .nav-menu {
+        background-color: rgba(240, 240, 240, 0.9); 
+        box-shadow: none; 
+    }
+
+    .nav-menu.active {
+        display: flex; 
+    }
+
+    .nav-menu li {
+        margin: 10px 0;
+        text-align: left; 
+    }
+
+    .nav-menu a {
+        color: var(--light-color);
+        text-decoration: none;
+        font-weight: 500;
+        transition: var(--transition);
+        padding: 10px 20px; 
+        display: block; 
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1); 
+    }
+
+    body.light-theme .nav-menu a {
+        color: var(--text-color); 
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1); 
+    }
+    
+    .nav-toggle {
+        display: block; 
+        order: 1; 
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .hero-section {
+        padding-top: 100px;
+    }
+
+    .hero-content h1 {
+        font-size: 30px;
+        margin-bottom: 15px;
+    }
+
+    .hero-content p {
+        font-size: 13px;
+        margin-bottom: 30px;
+    }
+
+    .section {
+        padding: 40px 0;
+    }
+
+    .section-title {
+        margin-bottom: 40px;
+    }
+
+    .section-title h2 {
+        font-size: 1.8rem;
+    }
+
+    #about .section-title p {
+        font-size: 1rem;
+        text-align: left;
+    }
+
+    .strengths-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .strength-card i {
+        width: 70px;
+        height: 70px;
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+
+    .strength-card h3 {
+        font-size: 1rem;
+    }
+
+    .services-grid,
+    .industries-grid,
+    .business-units-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .service-card,
+    .industry-card {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .service-card i,
+    .industry-card i {
+        font-size: 2rem;
+    }
+
+    .service-card h3,
+    .industry-card h3 {
+        font-size: 0.95rem;
+    }
+
+    .unit-card img {
+        height: 120px;
+    }
+
+    .unit-caption {
+        padding: 15px;
+    }
+
+    .unit-caption h3 {
+        font-size: 0.95rem;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .footer-col h3, .footer-col h4 {
+        font-size: 1.3rem;
+        margin-bottom: 15px;
+    }
+
+    .footer-col ul {
+        padding: 0;
+    }
+
+    .social-icons {
+        margin-top: 20px;
+    }
+    
+    .social-icons a {
+        font-size: 1.5rem;
+        margin: 0 10px;
+    }
+
+    .footer-col .contact-links a,
+    .footer-col .contact-email-links a {
+        justify-content: center;
+    }
+
+    .footer-bottom {
+        padding-top: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar .container {
+        padding: 0 15px;
+    }
+
+    .hero-content h1 {
+        font-size: 26px;
+    }
+
+    .hero-content p {
+        font-size: 12px;
+    }
+
+    .section-title h2 {
+        font-size: 1.6rem;
+    }
+
+    #about .section-title p {
+        font-size: 0.9rem;
+    }
+
+    .strength-card i {
+        width: 60px;
+        height: 60px;
+        font-size: 1.8rem;
+    }
+
+    .strength-card h3 {
+        font-size: 0.9rem;
+    }
+
+    .service-card,
+    .industry-card {
+        padding: 12px;
+    }
+
+    .service-card i,
+    .industry-card i {
+        font-size: 1.8rem;
+    }
+
+    .service-card h3,
+    .industry-card h3 {
+        font-size: 0.85rem;
+    }
+
+    .unit-card img {
+        height: 100px;
+    }
+
+    .unit-caption h3 {
+        font-size: 0.85rem;
+    }
+
+    .footer-col h3, .footer-col h4 {
+        font-size: 1.1rem;
+    }
+
+    .social-icons p {
+        font-size: 0.8rem;
+    }
+}
